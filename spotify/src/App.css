@@ -1,6 +1,9 @@
 /* NAVBAR */
 
 div.s-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
   background-color: black;
   width: 15rem;
   height: 100vh;
@@ -73,4 +76,200 @@ hr {
   width: 90%;
   border: none;
   border-top: solid #b3b3b3 0.1px;
+}
+
+/* PLAYER */
+
+.player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: #181818;
+  border-top: solid 0.5px #282828;
+  z-index: 10;
+}
+
+/* HOME MAIN */
+
+div.home {
+  margin: 0;
+  min-height: 100vh;
+  height: fit-content;
+  padding-left: 15rem;
+  padding-bottom: 8rem;
+  padding-top: 3.2rem;
+  background: rgb(34, 34, 34);
+  background: linear-gradient(
+    180deg,
+    rgba(34, 34, 34, 1) 5%,
+    rgba(18, 18, 18, 1) 40%
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+div.fixed {
+  position: fixed;
+  top: 0;
+  top: 0;
+  right: 0;
+  left: 15rem;
+  width: 70rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  z-index: 8;
+  background-color: #1818188e;
+}
+
+div.cont-arrow {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: inline-flex;
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.left,
+.right {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  box-shadow: -2px 2px 0 #b3b3b3;
+  top: 25%;
+  cursor: pointer;
+}
+
+.left {
+  transform: rotate(45deg);
+  left: 40%;
+}
+
+.right {
+  transform: rotate(-135deg);
+  left: 10%;
+}
+
+button.btn.btn-primary {
+  background-color: black !important;
+  color: #e1e1e1 !important;
+  border: #a8a8a8 1px solid;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 9rem;
+  height: 2.5rem;
+}
+
+button.btn.btn-primary:active {
+  border-color: white !important;
+}
+
+button.btn.btn-primary:focus {
+  box-shadow: 0 0 0 0;
+}
+
+button.btn.btn-primary:hover {
+  border-color: white;
+}
+
+h3 {
+  margin: 0;
+  margin-top: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+div.row.row-fixed {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  align-items: center;
+}
+
+div.row.good-morning {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.album-good-morning {
+  width: 95%;
+  height: 100%;
+}
+
+div.card {
+  background-color: #181818;
+  margin-top: 1rem;
+}
+
+div.card-title.h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 5%;
+}
+
+div.card-artist {
+  font-size: 0.8rem;
+  color: #b3b3b3;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+div.card-body {
+  padding: 5% 10%;
+}
+
+div.card-img-cont {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+}
+
+img.card-img-top {
+  box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.219);
+}
+
+div.card-img-cont::after {
+  content: "";
+  background-image: url(https://jccdallas.org/wp-content/uploads/2020/06/Spotify-Play-Button-1.png);
+  position: absolute;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 30%;
+  height: 30%;
+  top: 63%;
+  right: 9%;
+  z-index: 5;
+  opacity: 0;
+  border-radius: 10%;
+  transition: opacity 0.2s ease;
+  transition: top 0.4s ease;
+}
+
+div.card-img-cont:hover:after {
+  opacity: 1;
+  top: 58%;
+}
+
+div.recently-played.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

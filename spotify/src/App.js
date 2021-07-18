@@ -12,7 +12,7 @@ function App() {
         render={(routerProps) => <Home name="Luna" {...routerProps} />}
       />
       <Route
-        path="/artist"
+        path="/artist/:name"
         render={(routerProps) => <Artist {...routerProps} />}
       />
     </BrowserRouter>
