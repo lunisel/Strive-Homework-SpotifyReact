@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Container, Row } from "react-bootstrap";
+import { BrowserRouter } from "react-router-dom";
+import FixedNav from "./FixedHomeNav";
+import Navbar from "./Navbar";
+import Player from "./Player";
 
 const Artist = (props) => {
   const [artist, setArtist] = useState(null);
@@ -31,9 +35,26 @@ const Artist = (props) => {
   }, []);
 
   return (
-    <Container fluid>
-      <Row>{artist && <div>{artist.name}</div>}</Row>
-    </Container>
+    <div>
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
+      <div className="artist-main">
+        <FixedNav />
+        <Row className="artist-top">
+          {artist && (
+            <div className="artist-top">
+              <img
+                className="img-artist-top img-fluid"
+                src={artist.picture_big}
+              />
+              <h1>{artist.name}</h1>
+            </div>
+          )}
+        </Row>
+      </div>
+      <Player />
+    </div>
   );
 };
 

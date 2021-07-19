@@ -1,9 +1,10 @@
 import { Container, Row } from "react-bootstrap";
+import Navbar from "./Navbar";
 
 const Search = () => {
   return (
     <Container fluid>
-      <Row></Row>
+      <Navbar />
     </Container>
   );
 };

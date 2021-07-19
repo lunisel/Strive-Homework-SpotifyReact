@@ -56,7 +56,7 @@ class Home extends Component {
         </BrowserRouter>
         <div className="home">
           <Row className="row-fixed">
-            <FixedNav />
+            <FixedNav name={this.props.name} />
           </Row>
           <Row className="good-morning m-0">
             <div className="album-good-morning">
@@ -116,8 +116,14 @@ class Home extends Component {
                           />
                         </div>
                         <Card.Body>
-                          <Card.Title>{song.album.title}</Card.Title>
-                          <div className="card-artist">{song.artist.name}</div>
+                          <Card.Title onClick={() =>
+                              this.props.history.push("/album/" + song.album.id)
+                            }>{song.album.title}</Card.Title>
+                          <div onClick={() =>
+                              this.props.history.push(
+                                "/artist/" + song.artist.id
+                              )
+                            } className="card-artist">{song.artist.name}</div>
                         </Card.Body>
                       </Card>
                     </Col>
@@ -142,8 +148,14 @@ class Home extends Component {
                           />
                         </div>
                         <Card.Body>
-                          <Card.Title>{song.album.title}</Card.Title>
-                          <div className="card-artist">{song.artist.name}</div>
+                          <Card.Title onClick={() =>
+                              this.props.history.push("/album/" + song.album.id)
+                            }>{song.album.title}</Card.Title>
+                          <div onClick={() =>
+                              this.props.history.push(
+                                "/artist/" + song.artist.id
+                              )
+                            } className="card-artist">{song.artist.name}</div>
                         </Card.Body>
                       </Card>
                     </Col>
